@@ -1,18 +1,18 @@
-# 🎯 Face Recognition Attendance System
+# Face Recognition Attendance System
 
 A real-time, end-to-end face recognition attendance system built with **Python + OpenCV + Jupyter Notebook**.
 
-## ✨ Features
+## Features
 
-- ✅ Detects faces in real time using your webcam
-- ✅ **Recognizes** registered individuals (not just "a face" — but *whose* face)
-- ✅ Automatically logs **Entry Time**, **Exit Time**, **Date**, and **Total Hours**
-- ✅ Prevents duplicate entries in a single session
-- ✅ Exports attendance automatically to a formatted **Excel file**
-- ✅ Includes a simple daily **dashboard** (attendance %, late arrivals, summary charts)
-- ✅ Optional low-confidence alert so unregistered faces aren't marked present
+- Detects faces in real time using your webcam
+- **Recognizes** registered individuals (not just "a face" — but *whose* face)
+- Automatically logs **Entry Time**, **Exit Time**, **Date**, and **Total Hours**
+- Prevents duplicate entries in a single session
+- Exports attendance automatically to a formatted **Excel file**
+- Includes a simple daily **dashboard** (attendance %, late arrivals, summary charts)
+- Optional low-confidence alert so unregistered faces aren't marked present
 
-## 🧠 How It Works (Pipeline)
+## How It Works (Pipeline)
 
 ```
 Step 1: Register people   → capture ~60 face images per person (dataset/)
@@ -23,7 +23,7 @@ Step 5: Export            → attendance auto-saved to Excel (.xlsx)
 Step 6: Dashboard         → view/analyze attendance stats
 ```
 
-## 🛠️ Why LBPH instead of `face_recognition` / `dlib`?
+## Why LBPH instead of `face_recognition` / `dlib`?
 
 `dlib` is powerful but notoriously painful to install on Windows (needs CMake + C++ build tools) and is slow to set up. This project uses OpenCV's built-in **LBPH Face Recognizer** (`opencv-contrib-python`), which:
 
@@ -31,9 +31,9 @@ Step 6: Dashboard         → view/analyze attendance stats
 - Runs fast enough for real-time webcam recognition
 - Is accurate enough for attendance-style use cases (controlled, front-facing camera)
 
-> 💡 Want higher accuracy later? The notebook is structured so you can swap in `face_recognition` (dlib-based) with minimal changes.
+> Want higher accuracy later? The notebook is structured so you can swap in `face_recognition` (dlib-based) with minimal changes.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 face-recognition-attendance-system/
@@ -47,7 +47,7 @@ face-recognition-attendance-system/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 ```bash
@@ -73,7 +73,7 @@ Follow the steps inside the notebook in order:
 
 Attendance is saved automatically to `attendance_records/Attendance_<Month>_<Year>.xlsx`, with one sheet per date containing **ID, Name, Date, Entry Time, Exit Time, Total Hours, Status**.
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - Python
 - OpenCV (`opencv-contrib-python`) — face detection & LBPH recognition
@@ -81,7 +81,7 @@ Attendance is saved automatically to `attendance_records/Attendance_<Month>_<Yea
 - Matplotlib — dashboard charts
 - Jupyter Notebook
 
-## 🚧 Going Further
+## Going Further
 
 Ideas to extend this project:
 
@@ -93,10 +93,10 @@ Ideas to extend this project:
 - Move from Excel to a SQLite/MySQL database for larger organizations
 - Package into a Tkinter/PyQt desktop app for non-technical users
 
-## 📌 Note
+## Note
 
 This project was built as part of my internship at **Central Tool Room and Training Centre (CTTC)**.
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
